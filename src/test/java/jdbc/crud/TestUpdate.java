@@ -1,4 +1,4 @@
-package jdbc;
+package jdbc.crud;
 
 import org.jdbc.dao.StuDAO;
 import org.jdbc.model.Student;

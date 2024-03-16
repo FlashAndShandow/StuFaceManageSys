@@ -25,15 +25,51 @@ public class DBUtils {
         }
     }
     //对外提供一个方法来获取数据库连接
-    public static Connection getConnection() throws SQLException {
-        if (!connection.isClosed())
-                System.out.println("Succeeded connecting to the Database!");
+    public static Connection getConnection()  {
+        try {
+            if (!connection.isClosed())
+                    System.out.println("Successfully connecting to the Database!");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         return connection;
+    }
+
+    public static void closeDataBase()  {//关闭数据库连接
+
+        if (connection != null) {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+    public static void closePreStmt(PreparedStatement pstmt)  {//关闭PreparedStatement对象
+        if (pstmt != null) {
+            try {
+                pstmt.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+    public static void closeResultSet(ResultSet rs)  {//关闭ResultSet对象
+        if (rs != null) {
+            try {
+                rs.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     public static void main(String[] args) throws Exception{
 
         //3.通过数据库的连接操作数据库，实现增删改查
+        //测试连接是否成功
         Statement stmt = connection.createStatement();
         //import java.sql.ResultSet, 通过ResultSet来保存数据集
         ResultSet rs = stmt.executeQuery("select name,portrait_path from Students");

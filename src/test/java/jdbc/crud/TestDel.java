@@ -1,4 +1,4 @@
-package jdbc;
+package jdbc.crud;
 
 import org.jdbc.dao.StuDAO;
 import org.jdbc.model.Student;
@@ -9,7 +9,7 @@ public class TestDel {
         stu.setStudent_id(1);
         StuDAO dao = new StuDAO();
         try {
-            dao.delStu(stu);
+            dao.delStu(1);
         } catch (Exception e) {
             e.printStackTrace();
         }

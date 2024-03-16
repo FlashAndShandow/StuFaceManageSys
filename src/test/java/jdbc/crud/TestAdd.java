@@ -1,4 +1,4 @@
-package jdbc;
+package jdbc.crud;
 
 import java.util.Date;
 import java.util.List;

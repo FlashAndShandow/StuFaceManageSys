@@ -1,4 +1,4 @@
-package org.example;
+package org.function;
 
 
 import javax.imageio.ImageIO;
