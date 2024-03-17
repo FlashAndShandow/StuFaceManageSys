@@ -1,5 +1,4 @@
-package org.function;
-
+package com.guo.function;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -11,77 +10,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-public class ScreenCaptureApp {
-    public static void main(String[] args) {
-        // 创建窗口
-        JFrame frame = new JFrame("Menu Example");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(300, 200);
-
-        // 创建菜单栏
-        JMenuBar menuBar = new JMenuBar();
-
-        // 创建菜单
-        JMenu fileMenu = new JMenu("File");
-        JMenu editMenu = new JMenu("Edit");
-
-        // 创建菜单项
-        JMenuItem openItem = new JMenuItem("Open");
-        JMenuItem saveItem = new JMenuItem("Save");
-        JMenuItem cutItem = new JMenuItem("Cut");
-        JMenuItem copyItem = new JMenuItem("Copy");
-        JMenuItem pasteItem = new JMenuItem("Paste");
-
-        // 为菜单项添加事件监听器
-        openItem.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Open menu item clicked.");
-            }
-        });
-
-        // 将菜单项添加到菜单中
-        fileMenu.add(openItem);
-        fileMenu.add(saveItem);
-        editMenu.add(cutItem);
-        editMenu.add(copyItem);
-        editMenu.add(pasteItem);
-
-        // 将菜单添加到菜单栏中
-        menuBar.add(fileMenu);
-        menuBar.add(editMenu);
-
-        // 创建按钮
-        JButton button = new JButton("开始屏幕截图");
-
-        button.addActionListener(new ActionListener() {
-            //执行screenCap的startCapturing方法
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-//                JOptionPane.showMessageDialog(null, "Button Clicked!");
-                ScreenCapture screenCap = new ScreenCapture();
-                screenCap.startApp();
-            }
-        });
-
-        // 将按钮添加到窗口中
-        frame.getContentPane().add(button, BorderLayout.SOUTH);
-
-
-        // 将菜单栏设置到窗口中
-        frame.setJMenuBar(menuBar);
-
-        // 显示窗口
-        frame.setVisible(true);
-    }
-}
-
-class ScreenCapture extends JFrame {
+public class ScreenCapture extends JFrame {
     private static final int SCREENSHOT_INTERVAL = 10000; // 10 秒
     private static final String SCREENSHOT_DIR = "screenshots"; // 截图保存目录
     private static final String SCREENSHOT_FORMAT = "png"; // 截图保存格式

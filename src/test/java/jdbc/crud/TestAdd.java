@@ -1,10 +1,9 @@
 package jdbc.crud;
 
 import java.util.Date;
-import java.util.List;
 
-import org.jdbc.dao.StuDAO;
-import org.jdbc.model.Student;
+import com.guo.jdbc.dao.StuDAO;
+import com.guo.jdbc.model.Student;
 public class TestAdd {
     public static void main(String[] args) {
         Student stu = new Student();
