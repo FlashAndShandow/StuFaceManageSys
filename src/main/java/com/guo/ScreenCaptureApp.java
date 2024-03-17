@@ -7,6 +7,8 @@ import java.awt.*;
 
 public class ScreenCaptureApp {
     public static void main(String[] args) {
+
+
         // 创建窗口
         JFrame frame = new JFrame("Menu Example");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -42,17 +44,16 @@ public class ScreenCaptureApp {
         menuBar.add(fileMenu);
         menuBar.add(editMenu);
 
-        // 创建按钮
-        JButton button = new JButton("开始屏幕截图");
-
-        button.addActionListener(e -> {
-//                JOptionPane.showMessageDialog(null, "Button Clicked!");
-                ScreenCapture screenCap = new ScreenCapture();
-                screenCap.startApp();
+        // 创建截图按钮
+        JButton captureButton = new JButton("开始截图");
+        captureButton.addActionListener(e -> {
+            ScreenshotTool tool = new ScreenshotTool();
+            tool.setVisible(true);
         });
 
+
         // 将按钮添加到窗口中
-        frame.getContentPane().add(button, BorderLayout.SOUTH);
+        frame.getContentPane().add(captureButton, BorderLayout.SOUTH);
 
 
         // 将菜单栏设置到窗口中

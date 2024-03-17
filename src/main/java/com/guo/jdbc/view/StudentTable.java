@@ -14,7 +14,6 @@ public class StudentTable extends JTable {
         // 设置表头文字居中显示
 
 
-
         //设置表格主体
         setFont(new Font(null, Font.PLAIN, 14));//设置表格的字体
         setForeground(Color.BLACK);//设置表格的前景色
