@@ -1,12 +1,12 @@
-package org.jdbc.dao;
+package com.guo.jdbc.dao;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 
-import org.jdbc.model.DBUtils;
-import org.jdbc.model.Student;
+import com.guo.jdbc.model.DBUtils;
+import com.guo.jdbc.model.Student;
 
 public class StuDAO {
     /**
@@ -23,7 +23,7 @@ public class StuDAO {
         String sql = null;
         PreparedStatement psmt = null;
         try {
-            connection=DBUtils.getConnection();//首先拿到数据库的连接
+            connection= DBUtils.getConnection();//首先拿到数据库的连接
             sql="" +
                     "insert into Students"+
                     "(student_id,name,identity_number,portrait_path,"+

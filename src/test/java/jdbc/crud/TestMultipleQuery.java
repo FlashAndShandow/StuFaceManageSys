@@ -1,7 +1,7 @@
 package jdbc.crud;
 
-import org.jdbc.dao.StuDAO;
-import org.jdbc.model.Student;
+import com.guo.jdbc.dao.StuDAO;
+import com.guo.jdbc.model.Student;
 
 import java.util.List;
 

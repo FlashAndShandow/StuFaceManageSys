@@ -1,4 +1,4 @@
-package org.jdbc.view;
+package com.guo.jdbc.view;
 
 
 import javax.swing.*;

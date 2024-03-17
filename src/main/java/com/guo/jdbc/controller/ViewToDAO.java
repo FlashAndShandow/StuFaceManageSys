@@ -1,7 +1,7 @@
-package org.jdbc.controller;
+package com.guo.jdbc.controller;
 
-import org.jdbc.dao.StuDAO;
-import org.jdbc.model.Student;
+import com.guo.jdbc.dao.StuDAO;
+import com.guo.jdbc.model.Student;
 
 public class ViewToDAO {
 

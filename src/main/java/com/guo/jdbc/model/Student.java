@@ -1,4 +1,4 @@
-package org.jdbc.model;
+package com.guo.jdbc.model;
 
 import java.util.Date;
 
